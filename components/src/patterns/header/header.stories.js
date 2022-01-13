@@ -23,14 +23,6 @@ const Template = (args) => {
     openMobileMenu = false,
   } = args;
 
-  const AvatarMenuActiveClass = openAvatarMenu
-    ? 'sdds-nav__avatar--opened'
-    : '';
-
-  const MobileMenuActiveClass = openMobileMenu
-    ? 'sdds_nav--mob-menu-active'
-    : '';
-
   const [_, setArgs] = useArgs();
 
   window.toggleAppLauncher = (event) => {
@@ -78,19 +70,13 @@ const Template = (args) => {
           <ul class='sdds-nav__inline-menu'>
         
           <li class='sdds-nav__item'>
-            <a class='sdds-nav__link' href='#'> 
-              <span class='sdds-nav__link-icon'>
-                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
-              </span>
+            <a class='sdds-nav__link' href='#'>        
               <p class='sdds-nav__link-text'>Item 1</p> 
             </a>
           </li> 
           
           <li class='sdds-nav__item sdds-nav__item--active'>
-            <a class='sdds-nav__link ' href='#'>
-                <span class='sdds-nav__link-icon'>
-                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
-                </span>
+            <a class='sdds-nav__link ' href='#'>            
                 <p class='sdds-nav__link-text'>Item 2</p>
             </a>
           </li>
@@ -98,10 +84,7 @@ const Template = (args) => {
           <li class='sdds-nav__item sdds-nav__dropdown ${
             openInlineDropdown && 'sdds-nav__dropdown--opened'
           }'>  
-              <button class='sdds-nav__link' onclick='toggleInlineDropdown(event)'>
-                <span class='sdds-nav__link-icon'>
-                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
-                </span> 
+              <button class='sdds-nav__link' onclick='toggleInlineDropdown(event)'>            
                 <p class='sdds-nav__link-text'>Item 3</p>
                 <span class='sdds-nav_dropdown-icon'>
                     <svg viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -118,12 +101,9 @@ const Template = (args) => {
         </ul> 
     <ul class='sdds-nav__toolbar-menu'>    
       <li class='sdds-nav__item'>
-            <a class='sdds-nav__link' href='#'> 
-            <span class='sdds-nav__link-icon'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
-            </span>
+          <a class='sdds-nav__link' href='#'> 
             <p class='sdds-nav__link-text'>Item 4</p>                    
-        </a>
+          </a>
       </li> 
       
       <li class='sdds-nav__item sdds-nav__avatar' >
