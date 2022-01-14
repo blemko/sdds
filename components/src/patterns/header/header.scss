@@ -43,11 +43,6 @@ html {
   box-sizing: border-box;
 }
 
-* :focus {
-  outline: 2px solid var(--sdds-blue-400);
-  outline-offset: -2px;
-}
-
 @mixin sdds-nav__basic-element-style {
   cursor: pointer;
   background-color: var(--sdds-blue-800);
