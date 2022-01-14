@@ -85,6 +85,7 @@ html {
   height: var(--sdds-header-height);
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .sdds-nav__overlay {
