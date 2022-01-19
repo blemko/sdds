@@ -31,42 +31,17 @@ const BasicTemplate = ({ siteName }) => {
 
 export const Basic = BasicTemplate.bind({});
 Basic.args = {
-  siteName: 'Basic Application',
+  siteName: 'Basic App',
 };
 
 const InlineMenuTemplate = (args) => {
-  const {
-    siteName,
-    openInlineDropdown = true,
-    openAppLauncher = false,
-    openAvatarMenu = false,
-    openMobileMenu = false,
-  } = args;
+  const { siteName, openInlineDropdown = true, openMobileMenu = false } = args;
 
   const [_, setArgs] = useArgs();
-
-  window.toggleAppLauncher = (event) => {
-    event.preventDefault();
-    setArgs({
-      ...args,
-      openAppLauncher: !openAppLauncher,
-      openAvatarMenu: false,
-      openMobileMenu: false,
-    });
-  };
 
   window.toggleInlineDropdown = (event) => {
     event.preventDefault();
     setArgs({ ...args, openInlineDropdown: !openInlineDropdown });
-  };
-
-  window.toggleAvatarMenu = (event) => {
-    event.preventDefault();
-    setArgs({
-      ...args,
-      openAvatarMenu: !openAvatarMenu,
-      openAppLauncher: false,
-    });
   };
 
   window.toggleMobileMenu = (event) => {
@@ -82,8 +57,6 @@ const InlineMenuTemplate = (args) => {
     event.preventDefault();
     setArgs({
       ...args,
-      openAppLauncher: false,
-      openAvatarMenu: false,
       openMobileMenu: false,
     });
   };
@@ -94,8 +67,6 @@ const InlineMenuTemplate = (args) => {
 
   <nav class='sdds-nav  
     ${openMobileMenu && 'sdds-nav__mob-menu--opened'} 
-    ${openAvatarMenu && 'sdds-nav__avatar--opened'}
-    ${openAppLauncher && 'sdds-nav__app-launcher--opened'}
      '>     
       <div class='sdds-nav__left'>
         <div class="sdds-nav__overlay" onclick="closeDropdownsFromOverlay(event)"></div>
@@ -153,10 +124,8 @@ const InlineMenuTemplate = (args) => {
 
 export const InlineMenu = InlineMenuTemplate.bind({});
 InlineMenu.args = {
-  siteName: 'My Application',
+  siteName: 'Inline Menu App',
   openInlineDropdown: false,
-  openAppLauncher: false,
-  openAvatarMenu: false,
   openMobileMenu: false,
 };
 
@@ -358,7 +327,7 @@ const ToolbarMenuTemplate = (args) => {
 
 export const ToolbarMenu = ToolbarMenuTemplate.bind({});
 ToolbarMenu.args = {
-  siteName: 'My Application',
+  siteName: 'ToolBar Menu App',
   openInlineDropdown: false,
   openAppLauncher: false,
   openAvatarMenu: false,
@@ -568,7 +537,7 @@ const AllMenusTemplate = (args) => {
 
 export const AllMenus = AllMenusTemplate.bind({});
 AllMenus.args = {
-  siteName: 'My Application',
+  siteName: 'All Menus App',
   openInlineDropdown: false,
   openAppLauncher: false,
   openAvatarMenu: false,
