@@ -12,4 +12,14 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleMobileMenu(event): void {
+    const header = document.getElementsByClassName('sdds-nav')[0];
+    header.classList.toggle('sdds-nav__mob-menu--opened');
+  }
+
+  closeDropdownsFromOverlay(event): void {
+    const header = document.getElementsByClassName('sdds-nav')[0];
+    header.classList.remove('sdds-nav__mob-menu--opened');
+  }
 }
