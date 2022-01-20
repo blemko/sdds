@@ -9,7 +9,16 @@ export class HeaderComponent implements OnInit {
   @Input() isExpanded: boolean;
   @Output() expand = new EventEmitter();
 
-  constructor() {}
+  items = [
+    {
+      title: 'Home',
+      link: '/home',
+    },
+    {
+      title: 'Form',
+      link: '/form',
+    },
+  ];
 
   ngOnInit(): void {}
 
@@ -21,5 +30,21 @@ export class HeaderComponent implements OnInit {
   closeDropdownsFromOverlay(event): void {
     const header = document.getElementsByClassName('sdds-nav')[0];
     header.classList.remove('sdds-nav__mob-menu--opened');
+  }
+
+  removeActiveClass(): void {
+    const inlineMenuItems = document.querySelectorAll('.sdds-nav__item');
+    inlineMenuItems.forEach((item) => {
+      item.classList.remove('sdds-nav__item--active');
+    });
+  }
+
+  inlineMenuClick(event): void {
+    this.removeActiveClass();
+    event.closest('.sdds-nav__item').classList.add('sdds-nav__item--active');
+  }
+
+  logoClick(): void {
+    this.removeActiveClass();
   }
 }

@@ -1,6 +1,6 @@
 <nav class='sdds-nav sdds-u-fixed'>
   <div class='sdds-nav__left'>
-    <div class="sdds-nav__overlay"(click)="closeDropdownsFromOverlay($event.target)"></div>
+    <div class="sdds-nav__overlay" (click)="closeDropdownsFromOverlay($event.target)"></div>
     <button class='sdds-nav__mob-menu-btn' id="sdds-nav__mob-menu-btn-id" (click)="toggleMobileMenu($event.target)">
       <div id='sdds-nav__mob-menu-icon'>
         <span class='sdds-nav__mob-menu-icon-line' id='sdds-nav__mob-menu-icon-line-1'></span>
@@ -13,20 +13,24 @@
 
   <div class='sdds-nav__center'>
     <ul class='sdds-nav__inline-menu'>
-      <li class='sdds-nav__item'>
-        <a class='sdds-nav__item-core' href='/home'>
-          <p class='sdds-nav__item-core-text'>Home</p>
+      <li *ngFor="let item of items" class='sdds-nav__item'
+          (click)="inlineMenuClick($event.target)"
+          routerLink="{{item.link}}"
+          routerLinkActive="sdds-nav__item--active"
+      >
+        <a class='sdds-nav__item-core'>
+          <p class='sdds-nav__item-core-text'>{{item.title}}</p>
         </a>
       </li>
-      <li class='sdds-nav__item sdds-nav__item--active'>
-        <a class='sdds-nav__item-core ' href='/form'>
-          <p class='sdds-nav__item-core-text'>Form</p>
-        </a>
-      </li>
+
     </ul>
   </div>
 
   <div class='sdds-nav__right'>
-    <a class='sdds-nav__item sdds-nav__app-logo' href='/home'></a>
+    <a class='sdds-nav__item sdds-nav__app-logo'
+       routerLink="/home"
+       routerLinkActive="active"
+       (click)="logoClick()"
+    ></a>
   </div>
 </nav>
