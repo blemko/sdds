@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-* :active:focus {
-  outline: none;
-}
-
 @mixin sdds-nav__basic-element-style {
   cursor: pointer;
   background-color: var(--sdds-blue-800);
