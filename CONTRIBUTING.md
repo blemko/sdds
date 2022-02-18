@@ -11,10 +11,9 @@ The repository is a place for all Front End Developers to join the UI Developeme
 
 We're contributing, and are following, the coding standards available at https://github.com/scania/coding-conventions.
 
-## Report an issue
+## Report an issue, request feature or request for help
 
-- [Report bug](https://github.com/scania-digital-design-system/sdds/issues/new)
-- [Request feature](https://github.com/scania-digital-design-system/sdds/issues/new)
+Please use [our GitHub issues templates](https://github.com/scania-digital-design-system/sdds/issues/new/choose) to report an issue, request a feature or request for help in your project.
 
 <details>
    <summary><strong>Opening a pull request</strong></summary>
@@ -23,7 +22,7 @@ We're contributing, and are following, the coding standards available at https:/
    
    ```
    # Clone your fork of the repo 
-   git clone https://github.com/<your-github-username>/sdds.git
+   git clone https://github.com/scania-digital-design-system/sdds.git
    ```
    
 2. Sync your local to the original “upstream” repository by adding it as a remote. Pull in changes from “upstream” often so that you stay up to date so that when you submit your pull request, merge conflicts will be less likely. Read more [here](https://help.github.com/en/articles/syncing-a-fork). 
@@ -60,7 +59,7 @@ We're contributing, and are following, the coding standards available at https:/
 
 - Download and install node.js: https://nodejs.org/en/
   
-  **NodeJS: use 8.15 or newer stable version of node**
+  **NodeJS: use 12 or newer stable version of node**
 
 - If you're behind a firewall, CONFIGURE THE PROXY
 
@@ -87,9 +86,5 @@ npm start
 
 It will start demo and run storybook to preview your components. Add stories to preview in storybook. See components/header/header.stories.js for stories example.
 Visit http://localhost:1339/
-
-### Running test
-
-Testing the components is done using the Stencil testing setup that includes unit test and End-to-End test. To test locally run `npm test`
 </details>
 
