@@ -51,7 +51,7 @@ export default {
     state: {
       name: 'Error',
       control: {
-        type: 'boolean',
+        type: 'radio',
         options: ['default', 'error'],
       },
       defaultValue: 'default',
